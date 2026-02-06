@@ -1,0 +1,7 @@
+.force-white {
+    color: #ffffff !important;
+}
+
+.force-white * {
+    color: #ffffff !important;
+}
