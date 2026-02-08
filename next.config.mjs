@@ -1,12 +1,12 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    output: 'export',
-    images: {
-        unoptimized: true,
-    },
-    // basePath: '/Asif-Abdullah-Portfolio-Website',
-    // assetPrefix: '/Asif-Abdullah-Portfolio-Website',
-    trailingSlash: true,
+  output: 'export',
+  trailingSlash: true,
+  images: {
+    unoptimized: true,
+  },
+  basePath: '/My-portfolio-Website',
+  assetPrefix: '/My-portfolio-Website/',
 };
 
 export default nextConfig;
