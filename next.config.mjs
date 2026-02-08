@@ -4,8 +4,8 @@ const nextConfig = {
     images: {
         unoptimized: true,
     },
-    basePath: '/Asif-Abdullah-Portfolio-Website',
-    assetPrefix: '/Asif-Abdullah-Portfolio-Website',
+    // basePath: '/Asif-Abdullah-Portfolio-Website',
+    // assetPrefix: '/Asif-Abdullah-Portfolio-Website',
     trailingSlash: true,
 };
 
