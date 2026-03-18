@@ -41,8 +41,8 @@ export default function WorkIcommune() {
                                 </div>
 
                                 <div className="col-12 text-center py-5">
-                                    <div className="mx-auto rounded-4 overflow-hidden shadow-lg bg-6" style={{ maxWidth: '1200px' }}>
-                                        <img src="/assets/imgs/work/icommune.PNG" alt="icommune App Featured Mockup" className="w-100 object-fit-contain" style={{ height: '600px', imageRendering: 'auto' }} />
+                                    <div className="mx-auto rounded-4 overflow-hidden shadow-lg" style={{ maxWidth: '1200px' }}>
+                                        <img src="/assets/imgs/icomunw.jpeg" alt="icommune App Featured Mockup" className="w-100 img-fluid" style={{ height: 'auto', display: 'block' }} />
                                     </div>
                                 </div>
 

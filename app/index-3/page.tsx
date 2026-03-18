@@ -90,7 +90,7 @@ export default function Home3() {
 									<span className="text-primary-3">Shaping Narratives, Igniting Minds</span>
 									<h2 className="text-300 my-3">Crafting Stories <span className="text-dark">with Passion: Discover the Work</span> of Meisa</h2>
 									<p className="mb-8">Welcome to the creative world of Meisa Rosie, where words are crafted into captivating stories and insightful content. Explore her journey as an award-winning writer and discover how she brings imagination to life through her unique voice and compelling narratives.</p>
-									<Link href="/Curriculum Vita -Asif.pdf" className="btn btn-secondary-3 me-2" target="_blank" download>
+									<Link href="/assets/imgs/work/Curriculum Vita -Asif Abdullah.pdf" className="btn btn-secondary-3 me-2" target="_blank" download>
 										Download CV
 										<i className="ri-download-line ms-2" />
 									</Link>

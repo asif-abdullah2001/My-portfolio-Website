@@ -94,10 +94,10 @@ export default function Contact1() {
 									backgroundColor: 'rgba(110, 78, 242, 0.15)'
 								}}>
 									<img
-										src="/assets/imgs/work/PNG.jpeg"
+										src="/assets/imgs/asifs%20photo.jpeg"
 										alt="Asif Abdullah"
-										className="rounded-4 w-100 object-fit-cover shadow-sm"
-										style={{ height: 'auto', display: 'block' }}
+										className="rounded-4 w-100 img-fluid object-fit-cover shadow-sm"
+										style={{ height: 'auto', display: 'block', maxHeight: '100%' }}
 									/>
 								</div>
 

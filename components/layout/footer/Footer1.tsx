@@ -12,8 +12,14 @@ export default function Footer1() {
 								<Link href="/" className="fs-5">
 									Home
 								</Link>
-								<Link href="/work" className="fs-5">
+								<Link href="/#projects" className="fs-5">
 									Portfolio
+								</Link>
+								<Link href="/#resume" className="fs-5">
+									My Resume
+								</Link>
+								<Link href="/#skills" className="fs-5">
+									My Skills
 								</Link>
 								<Link href="/#contact" className="fs-5">
 									Contact

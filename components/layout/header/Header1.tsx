@@ -12,6 +12,27 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu, isOffC
 						<i className="ri-menu-2-line" />
 					</Link>
 					<div className="container py-3 px-0">
+						{/* Mobile Menu Trigger */}
+						{/* Mobile Menu Trigger & Social Icons */}
+						<div className="d-lg-none d-flex align-items-center ms-3">
+							<div className="cursor-pointer me-4" onClick={handleMobileMenu}>
+								<i className="ri-menu-line fs-1" style={{ color: '#ffffff' }} />
+							</div>
+							<div className="d-flex gap-3">
+								<Link href="https://www.facebook.com/share/1XUM1xryGY/" target="_blank">
+									<i className="ri-facebook-circle-fill fs-4" style={{ color: '#ffffff' }} />
+								</Link>
+								<Link href="https://www.linkedin.com/in/asif-abdullah-ba2a86245?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">
+									<i className="ri-linkedin-fill fs-4" style={{ color: '#ffffff' }} />
+								</Link>
+								<Link href="https://www.behance.net/sizanabdullah" target="_blank">
+									<i className="ri-behance-fill fs-4" style={{ color: '#ffffff' }} />
+								</Link>
+								<Link href="https://github.com/asif-abdullah2001" target="_blank" className="text-decoration-none">
+									<i className="ri-github-fill fs-4" style={{ color: '#ffffff' }} />
+								</Link>
+							</div>
+						</div>
 
 						<div className="d-none d-lg-flex">
 							<div className="collapse navbar-collapse" id="navbarSupportedContent">
@@ -29,7 +50,7 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu, isOffC
 								<Link href="https://www.behance.net/sizanabdullah" target="_blank">
 									<i className="ri-behance-fill fs-18" />
 								</Link>
-								<Link href="/#" onClick={(e) => e.preventDefault()} style={{ cursor: 'default' }}>
+								<Link href="https://github.com/asif-abdullah2001" target="_blank">
 									<i className="ri-github-fill fs-18" />
 								</Link>
 							</div>

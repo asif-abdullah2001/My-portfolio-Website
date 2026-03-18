@@ -63,18 +63,7 @@ export default function Projects2() {
 																		<p className="text-300 mb-0 text-end">Conceptual JSC</p>
 																	</div>
 																</li>
-																<li className="text-dark mb-3 border-bottom pb-3">
-																	<div className="d-flex justify-content-between">
-																		<p className="text-dark mb-0 text-end">Completion Time</p>
-																		<p className="text-300 mb-0 text-end">6 months</p>
-																	</div>
-																</li>
-																<li className="text-dark mb-3 border-bottom pb-3">
-																	<div className="d-flex justify-content-between">
-																		<p className="text-dark mb-0 text-end">Technologies</p>
-																		<p className="text-300 mb-0 text-end">Node.js, React, MongoDB, Stripe</p>
-																	</div>
-																</li>
+
 															</ul>
 															<div className="d-flex flex-wrap align-items-center gap-3 mt-7">
 																<Link href="#" className="text-300 border-bottom border-1 px-2 pb-2 link-hover">
@@ -114,18 +103,7 @@ export default function Projects2() {
 																		<p className="text-300 mb-0 text-end">Conceptual JSC</p>
 																	</div>
 																</li>
-																<li className="text-dark mb-3 border-bottom pb-3">
-																	<div className="d-flex justify-content-between">
-																		<p className="text-dark mb-0 text-end">Completion Time</p>
-																		<p className="text-300 mb-0 text-end">6 months</p>
-																	</div>
-																</li>
-																<li className="text-dark mb-3 border-bottom pb-3">
-																	<div className="d-flex justify-content-between">
-																		<p className="text-dark mb-0 text-end">Technologies</p>
-																		<p className="text-300 mb-0 text-end">Node.js, React, MongoDB, Stripe</p>
-																	</div>
-																</li>
+
 															</ul>
 															<div className="d-flex flex-wrap align-items-center gap-3 mt-7">
 																<Link href="#" className="text-300 border-bottom border-1 px-2 pb-2 link-hover">

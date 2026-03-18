@@ -69,7 +69,7 @@ export default function Home2() {
 												<span className="fs-6 text-300 mb-2">...and more</span>
 											</div>
 										</div>
-										<Link href="/Curriculum Vita -Asif.pdf" className="btn me-2 text-300 ps-0 mt-4" target="_blank" download>
+										<Link href="/assets/imgs/work/Curriculum Vita -Asif Abdullah.pdf" className="btn me-2 text-300 ps-0 mt-4" target="_blank" download>
 											<i className="ri-download-line text-primary-2" />
 											[ Download my CV ]
 										</Link>

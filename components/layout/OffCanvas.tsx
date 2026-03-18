@@ -45,9 +45,9 @@ export default function OffCanvas({ isOffCanvas, handleOffCanvas }: any) {
 							<Link href="https://www.behance.net/sizanabdullah" target="_blank" className="icon-shape icon-sm border border-light rounded-circle text-white hover-primary-1 transition-all" title="Behance" style={{ borderColor: 'rgba(255,255,255,0.3) !important' }}>
 								<i className="ri-behance-fill fs-18" style={{ color: '#ffffff' }} />
 							</Link>
-							<div className="icon-shape icon-sm border border-light rounded-circle text-white opacity-50" title="GitHub" style={{ borderColor: 'rgba(255,255,255,0.3) !important' }}>
+							<Link href="https://github.com/asif-abdullah2001" target="_blank" className="icon-shape icon-sm border border-light rounded-circle text-white hover-primary-1 transition-all" title="GitHub" style={{ borderColor: 'rgba(255,255,255,0.3) !important' }}>
 								<i className="ri-github-fill fs-18" style={{ color: '#ffffff' }} />
-							</div>
+							</Link>
 						</div>
 					</div>
 				</div>

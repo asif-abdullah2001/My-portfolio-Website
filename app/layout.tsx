@@ -36,6 +36,10 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 export const metadata: Metadata = {
 	title: "Asif Abdullah Portfolio",
 	description: "Asif Abdullah - Software Quality Assurance Engineer Portfolio",
+	icons: {
+		icon: "/assets/imgs/asifs%20photo.jpeg",
+		shortcut: "/assets/imgs/asifs%20photo.jpeg",
+	},
 }
 
 export default function RootLayout({

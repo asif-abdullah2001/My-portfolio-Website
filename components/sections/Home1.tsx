@@ -12,14 +12,20 @@ export default function Home1() {
 							<span className="text-dark">Hello! I’m Asif Abdullah.</span>
 							<h1 className="ds-2 mb-3 font-stylish">Ensuring Software Quality Through <span className="text-primary-1">Smart Testing</span></h1>
 							<p className="text-300 mb-6">I’m an SQA Engineer specializing in web and mobile automation, along with REST API and database testing, to deliver reliable and bug-free products</p>
-							<Link href="/Curriculum Vita -Asif.pdf" className="btn btn-gradient me-2" target="_blank" download>
-								Download CV
-								<i className="ri-download-line ms-2" />
-							</Link>
-							<Link href="/#contact" className="btn btn-gradient d-inline-flex align-items-center">
-								<span>Contact me</span>
-								<i className="ri-arrow-right-line ms-2" />
-							</Link>
+							<div className="d-flex flex-column flex-sm-row gap-3 align-items-start">
+								<Link href="/assets/imgs/work/Curriculum Vita -Asif Abdullah.pdf" className="btn btn-gradient" target="_blank" download>
+									Download CV
+									<i className="ri-download-line ms-2" />
+								</Link>
+								<Link href="/#contact" className="btn btn-gradient d-inline-flex align-items-center">
+									<span>Contact me</span>
+									<i className="ri-arrow-right-line ms-2" />
+								</Link>
+							</div>
+
+							{/* Social Icons for Mobile */}
+
+
 							<p className="text-400 mt-6 mb-3">Expertise in industry-standard tools</p>
 							<div className="d-flex gap-3">
 								<div className="brand-logo icon-xl icon-shape rounded-3 bg-900 p-1">

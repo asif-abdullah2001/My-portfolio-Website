@@ -46,7 +46,7 @@ export default function WorkZiyarah() {
 
                                 <div className="col-12 text-center py-5">
                                     <div className="mx-auto rounded-4 overflow-hidden shadow-lg" style={{ maxWidth: '800px' }}>
-                                        <img src="/assets/imgs/work/WhatsApp Image 2026-02-04 at 2.43.45 PM.jpeg" alt="Ziyarah App Featured Mockup" className="w-100 object-fit-cover" style={{ height: '600px', imageRendering: 'auto', transform: 'scale(1.001)' }} />
+                                        <img src="/assets/imgs/Gemini_Generated_Image_b5g91mb5g91mb5g9.png" alt="Ziyarah App Featured Mockup" className="w-100 img-fluid" style={{ height: 'auto', display: 'block' }} />
                                     </div>
                                 </div>
 
