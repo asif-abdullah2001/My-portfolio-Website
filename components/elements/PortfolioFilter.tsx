@@ -58,6 +58,7 @@ export default function PortfolioFilter() {
 					<div className="button-group filter-button-group filter-menu-active">
 						<button className={activeBtn("*")} onClick={handleFilterKeyChange("*")}>All Projects</button>
 						<button className={activeBtn("sqa")} onClick={handleFilterKeyChange("sqa")}>SQA</button>
+						<button className={activeBtn("dev")} onClick={handleFilterKeyChange("dev")}>Development</button>
 						<button className={activeBtn("ui")} onClick={handleFilterKeyChange("ui")}>UI/UX</button>
 					</div>
 				</div>
@@ -277,6 +278,58 @@ export default function PortfolioFilter() {
 						</div>
 					</div>
 
+
+					{/* 8. ICommune Portfolio Website */}
+					<div className="filter-item col-lg-6 col-12 dev">
+						<div className="project-item rounded-4 overflow-hidden position-relative p-md-4 p-3 bg-white shadow-sm">
+							<Link href="/work-icomune-portfolio">
+								<img className="rounded-3 w-100 zoom-img" src="/assets/icomune%20portfolio.jpeg" alt="ICommune App Portfolio" onLoad={handleImageLoad} />
+							</Link>
+							<div className="d-flex align-items-center mt-4">
+								<div className="project-card-content">
+									<h3 className="fw-semibold font-stylish mb-1">ICommune App Portfolio</h3>
+									<p className="mb-3 text-secondary">Next.js Development & AI-Assisted Design</p>
+									<div className="d-flex gap-2">
+										<Link href="https://icommune.app/" target="_blank" className="btn btn-dark btn-sm py-1 px-3 fs-7 rounded-pill d-inline-flex align-items-center bg-black border-secondary">
+											<i className="ri-global-line me-2 text-primary-1"></i>
+											<span style={{ color: '#ffffff' }}>Visit Site</span>
+										</Link>
+									</div>
+								</div>
+								<Link href="/work-icomune-portfolio" className="project-card-icon icon-shape ms-auto icon-md rounded-circle flex-shrink-0">
+									<i className="ri-arrow-right-up-line" />
+								</Link>
+							</div>
+						</div>
+					</div>
+
+					{/* 9. Personal Portfolio Website */}
+					<div className="filter-item col-lg-6 col-12 dev">
+						<div className="project-item rounded-4 overflow-hidden position-relative p-md-4 p-3 bg-white shadow-sm">
+							<Link href="/work-personal-portfolio">
+								<img className="rounded-3 w-100 zoom-img" src="/assets/my%20portfolio.jpeg" alt="Personal Portfolio" onLoad={handleImageLoad} />
+							</Link>
+							<div className="d-flex align-items-center mt-4">
+								<div className="project-card-content">
+									<h3 className="fw-semibold font-stylish mb-1">Personal Portfolio</h3>
+									<p className="mb-3 text-secondary">Next.js Development & AI-Assisted Vibe Coding</p>
+									<div className="d-flex gap-2">
+										<Link href="/work-personal-portfolio" className="btn btn-dark btn-sm py-1 px-3 fs-7 rounded-pill d-inline-flex align-items-center bg-black border-secondary">
+											<i className="ri-code-s-slash-line me-2 text-primary-1"></i>
+											<span style={{ color: '#ffffff' }}>Details</span>
+										</Link>
+										<Link href="https://asif-abullah.netlify.app/" target="_blank" className="btn btn-dark btn-sm py-1 px-3 fs-7 rounded-pill d-inline-flex align-items-center bg-black border-secondary">
+											<i className="ri-global-line me-2 text-primary-1"></i>
+											<span style={{ color: '#ffffff' }}>Visit Site</span>
+										</Link>
+									</div>
+								</div>
+								<Link href="/work-personal-portfolio" className="project-card-icon icon-shape ms-auto icon-md rounded-circle flex-shrink-0">
+									<i className="ri-arrow-right-up-line" />
+								</Link>
+							</div>
+						</div>
+					</div>
 
 				</div>
 			</div>

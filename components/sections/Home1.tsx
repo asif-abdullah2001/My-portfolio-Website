@@ -32,6 +32,9 @@ export default function Home1() {
 									<img src="/assets/imgs/cypress.svg" alt="Cypress" className="w-100 h-100 object-fit-contain" />
 								</div>
 								<div className="brand-logo icon-xl icon-shape rounded-3 bg-900 p-1">
+									<img src="/assets/imgs/brands/brands-1/Playwright--Streamline-Svg-Logos.svg" alt="Playwright" className="w-100 h-100 object-fit-contain" />
+								</div>
+								<div className="brand-logo icon-xl icon-shape rounded-3 bg-900 p-1">
 									<img src="/assets/imgs/appium.png" alt="Appium" className="w-100 h-100 object-fit-contain" />
 								</div>
 								<div className="brand-logo icon-xl icon-shape rounded-3 bg-900 p-1">

@@ -34,7 +34,7 @@ const projects = [
 	},
 	{
 		title: "BA-Systems Core Website",
-		category: "WEB APP TESTING & QA",
+		category: "WEB TESTING & QA",
 		image: "/image.png",
 		link: "/work-ba-systems",
 		description: "Led comprehensive frontend and backend web testing for the modern corporate website of Business Automation Ltd. Validated responsive UI, server-side APIs, data integrations, and robust full-stack web architecture across all devices.",
@@ -83,6 +83,28 @@ const projects = [
 		externalText: "Visit Site",
 		externalIcon: "ri-global-line",
 		imageScale: "1.12"
+	},
+	{
+		title: "ICommune App Portfolio Website",
+		category: "NEXT.JS DEVELOPMENT",
+		image: "/assets/icomune%20portfolio.jpeg",
+		link: "/work-icomune-portfolio",
+		description: "Developed a modern and responsive portfolio website for the ICommune application using Next.js. The primary goal of this project was to showcase the app’s features, modules, and overall product vision in a clean and user-friendly interface.",
+		externalLink: "https://icommune.app/",
+		externalText: "Visit Site",
+		externalIcon: "ri-global-line",
+		imageScale: "1.0"
+	},
+	{
+		title: "Personal Portfolio Website",
+		category: "NEXT.JS DEVELOPMENT",
+		image: "/assets/my%20portfolio.jpeg",
+		link: "/work-personal-portfolio",
+		description: "Designed and developed my own personal portfolio website using Next.js to showcase my skills, projects, and professional journey in a clean and interactive way. Built using a vibe coding approach and inspired by Google 'Anti-Gravity'.",
+		externalLink: "https://asif-abullah.netlify.app/",
+		externalText: "Visit Site",
+		externalIcon: "ri-global-line",
+		imageScale: "1.0"
 	}
 ];
 
