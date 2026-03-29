@@ -7,6 +7,7 @@ export default function PortfolioFilter() {
 	// Isotope
 	const isotope = useRef<Isotope | null>(null)
 	const [filterKey, setFilterKey] = useState<string>("*")
+	const [visibleCount, setVisibleCount] = useState(9)
 
 	useEffect(() => {
 		const initIsotope = () => {
@@ -40,7 +41,20 @@ export default function PortfolioFilter() {
 
 	useEffect(() => {
 		if (isotope.current) {
-			isotope.current.arrange({ filter: filterKey === "*" ? "*" : `.${filterKey}` })
+			isotope.current.arrange({ filter: filterKey === "*" ? ":not(.hide-all)" : `.${filterKey}` })
+		}
+		
+		const activeFilter = filterKey === "*" ? ".filter-item:not(.hide-all)" : `.filter-item.${filterKey}`;
+		const elements = document.querySelectorAll(activeFilter);
+		
+		if (elements && elements.length > 0) {
+			setVisibleCount(elements.length);
+		} else {
+			if (filterKey === "*") setVisibleCount(9);
+			else if (filterKey === "sqa") setVisibleCount(8);
+			else if (filterKey === "dev") setVisibleCount(2);
+			else if (filterKey === "ui") setVisibleCount(1);
+			else setVisibleCount(0);
 		}
 	}, [filterKey])
 
@@ -279,8 +293,10 @@ export default function PortfolioFilter() {
 					</div>
 
 
+
+
 					{/* 8. ICommune Portfolio Website */}
-					<div className="filter-item col-lg-6 col-12 dev">
+					<div className="filter-item col-lg-6 col-12 dev hide-all">
 						<div className="project-item rounded-4 overflow-hidden position-relative p-md-4 p-3 bg-white shadow-sm">
 							<Link href="/work-icomune-portfolio">
 								<img className="rounded-3 w-100 zoom-img" src="/assets/icomune%20portfolio.jpeg" alt="ICommune App Portfolio" onLoad={handleImageLoad} />
@@ -304,7 +320,7 @@ export default function PortfolioFilter() {
 					</div>
 
 					{/* 9. Personal Portfolio Website */}
-					<div className="filter-item col-lg-6 col-12 dev">
+					<div className="filter-item col-lg-6 col-12 dev hide-all">
 						<div className="project-item rounded-4 overflow-hidden position-relative p-md-4 p-3 bg-white shadow-sm">
 							<Link href="/work-personal-portfolio">
 								<img className="rounded-3 w-100 zoom-img" src="/assets/my%20portfolio.jpeg" alt="Personal Portfolio" onLoad={handleImageLoad} />
@@ -314,10 +330,6 @@ export default function PortfolioFilter() {
 									<h3 className="fw-semibold font-stylish mb-1">Personal Portfolio</h3>
 									<p className="mb-3 text-secondary">Next.js Development & AI-Assisted Vibe Coding</p>
 									<div className="d-flex gap-2">
-										<Link href="/work-personal-portfolio" className="btn btn-dark btn-sm py-1 px-3 fs-7 rounded-pill d-inline-flex align-items-center bg-black border-secondary">
-											<i className="ri-code-s-slash-line me-2 text-primary-1"></i>
-											<span style={{ color: '#ffffff' }}>Details</span>
-										</Link>
 										<Link href="https://asif-abullah.netlify.app/" target="_blank" className="btn btn-dark btn-sm py-1 px-3 fs-7 rounded-pill d-inline-flex align-items-center bg-black border-secondary">
 											<i className="ri-global-line me-2 text-primary-1"></i>
 											<span style={{ color: '#ffffff' }}>Visit Site</span>
@@ -330,9 +342,23 @@ export default function PortfolioFilter() {
 							</div>
 						</div>
 					</div>
-
 				</div>
 			</div>
+			
+			{visibleCount > 8 && (
+				<div className="contairer overflow-hidden">
+					<div className="row justify-content-center position-relative button-project pb-160 bg-900 pt-1">
+						<Link href={filterKey === "*" ? "/work" : `/work?category=${filterKey}`} className="icon_hover position-relative z-1 icon-shape icon_150 border-linear-2 rounded-circle position-relative overflow-hidden bg-white hover-up">
+							<span className="icon-shape icon-md bg-linear-2 rounded-circle position-absolute bottom-0 end-0" />
+							<p className="m-0 fs-7 fw-bold text-capitalize position-absolute top-50 start-50 translate-middle">
+								View All
+								<i className="ri-arrow-right-up-line fs-7" />
+							</p>
+						</Link>
+						<div className="ellipse position-absolute bottom-0 start-50 translate-middle-x z-0" />
+					</div>
+				</div>
+			)}
 		</>
 	)
 }

@@ -1,5 +1,8 @@
+'use client'
 import Layout from "@/components/layout/Layout"
 import Link from "next/link"
+import { useSearchParams } from "next/navigation"
+import { Suspense } from "react"
 
 const projects = [
 	{
@@ -104,12 +107,72 @@ const projects = [
 		externalLink: "https://asif-abullah.netlify.app/",
 		externalText: "Visit Site",
 		externalIcon: "ri-global-line",
-		imageScale: "1.0"
+		imageScale: "1.0",
+		hideDetails: true
 	}
 ];
 
-export default function Work() {
+function ProjectList() {
+	const searchParams = useSearchParams();
+	const category = searchParams?.get('category');
+	
+	const filteredProjects = category 
+		? projects.filter(p => {
+			if (category === 'dev') return p.category.includes('DEVELOPMENT');
+			if (category === 'sqa') return p.category.includes('TESTING') || p.category.includes('QA') || p.category.includes('AUTOMATION') || p.category.includes('EBS');
+			if (category === 'ui') return p.category.includes('UI') || p.category.includes('UX');
+			return true;
+		})
+		: projects;
 
+	return (
+		<div className="container mt-6">
+			{filteredProjects.map((project, index) => (
+				<div className="row align-items-center mb-10" key={index} style={{ paddingBottom: '30px', borderBottom: index !== filteredProjects.length - 1 ? '1px solid #333' : 'none' }}>
+					<div className={`col-lg-6 mb-5 mb-lg-0 ${index % 2 !== 0 ? 'order-lg-2' : 'order-lg-1'}`}>
+						<div className="rounded-4 overflow-hidden position-relative shadow-lg zoom-img bg-6">
+							<Link href={project.link} className="d-block position-relative">
+								<img 
+									src={project.image} 
+									alt={project.title} 
+									className="w-100 img-fluid" 
+									style={{ 
+										objectFit: 'contain', 
+										height: 'auto', 
+										display: 'block',
+										transform: project.imageScale ? `scale(${project.imageScale})` : 'none',
+										transformOrigin: 'center center'
+									}} 
+								/>
+							</Link>
+						</div>
+					</div>
+					<div className={`col-lg-5 ${index % 2 !== 0 ? 'order-lg-1 me-auto' : 'order-lg-2 ms-auto'}`}>
+						<p className="text-primary-1 mb-2 fw-semibold text-uppercase letter-spacing-1">{project.category}</p>
+						<h2 className="fw-semibold mb-3 display-6 text-white">{project.title}</h2>
+						<p className="text-400 mb-5 fs-5 lh-lg">{project.description}</p>
+						
+						<div className="d-flex align-items-center flex-wrap gap-3">
+							{!project.hideDetails && (
+								<Link href={project.link} className="btn btn-primary btn-md rounded-pill d-inline-flex align-items-center shadow">
+									Details <i className="ri-arrow-right-up-line ms-2" />
+								</Link>
+							)}
+							{project.externalLink && (
+								<Link href={project.externalLink} target="_blank" className="btn btn-outline-light btn-md rounded-pill d-inline-flex align-items-center">
+									<i className={`${project.externalIcon} me-2`}></i>
+									{project.externalText}
+								</Link>
+							)}
+						</div>
+					</div>
+				</div>
+			))}
+		</div>
+	)
+}
+
+export default function Work() {
 	return (
 		<>
 
@@ -133,47 +196,9 @@ export default function Work() {
 						</div>
 						
 						{/* Alternate Layout Series */}
-						<div className="container mt-6">
-							{projects.map((project, index) => (
-								<div className="row align-items-center mb-10" key={index} style={{ paddingBottom: '30px', borderBottom: index !== projects.length - 1 ? '1px solid #333' : 'none' }}>
-									<div className={`col-lg-6 mb-5 mb-lg-0 ${index % 2 !== 0 ? 'order-lg-2' : 'order-lg-1'}`}>
-										<div className="rounded-4 overflow-hidden position-relative shadow-lg zoom-img bg-6">
-											<Link href={project.link} className="d-block position-relative">
-												<img 
-													src={project.image} 
-													alt={project.title} 
-													className="w-100 img-fluid" 
-													style={{ 
-														objectFit: 'contain', 
-														height: 'auto', 
-														display: 'block',
-														transform: project.imageScale ? `scale(${project.imageScale})` : 'none',
-														transformOrigin: 'center center'
-													}} 
-												/>
-											</Link>
-										</div>
-									</div>
-									<div className={`col-lg-5 ${index % 2 !== 0 ? 'order-lg-1 me-auto' : 'order-lg-2 ms-auto'}`}>
-										<p className="text-primary-1 mb-2 fw-semibold text-uppercase letter-spacing-1">{project.category}</p>
-										<h2 className="fw-semibold mb-3 display-6 text-white">{project.title}</h2>
-										<p className="text-400 mb-5 fs-5 lh-lg">{project.description}</p>
-										
-										<div className="d-flex align-items-center flex-wrap gap-3">
-											<Link href={project.link} className="btn btn-primary btn-md rounded-pill d-inline-flex align-items-center shadow">
-												Details <i className="ri-arrow-right-up-line ms-2" />
-											</Link>
-											{project.externalLink && (
-												<Link href={project.externalLink} target="_blank" className="btn btn-outline-light btn-md rounded-pill d-inline-flex align-items-center">
-													<i className={`${project.externalIcon} me-2`}></i>
-													{project.externalText}
-												</Link>
-											)}
-										</div>
-									</div>
-								</div>
-							))}
-						</div>
+						<Suspense fallback={<div className="container mt-6 text-center text-white">Loading projects...</div>}>
+							<ProjectList />
+						</Suspense>
 					</section>
 				</div>
 			</Layout>

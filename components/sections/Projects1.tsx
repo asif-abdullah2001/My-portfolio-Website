@@ -32,19 +32,6 @@ export default function Projects1() {
 			<div className="bg-900 fillter-project" data-background="assets/imgs/projects/projects-1/background.png">
 				<PortfolioFilter />
 			</div>
-			<div className="contairer overflow-hidden">
-				<div className="row justify-content-center position-relative button-project pb-160 bg-900 pt-1">
-					<Link href="/work" className="icon_hover position-relative z-1 icon-shape icon_150 border-linear-2 rounded-circle position-relative overflow-hidden bg-white hover-up">
-						<span className="icon-shape icon-md bg-linear-2 rounded-circle position-absolute bottom-0 end-0" />
-						<p className="m-0 fs-7 fw-bold text-capitalize position-absolute top-50 start-50 translate-middle">
-							View All
-							<i className="ri-arrow-right-up-line fs-7" />
-						</p>
-					</Link>
-					<div className="ellipse position-absolute bottom-0 start-50 translate-middle-x z-0" />
-				</div>
-			</div>
-
 		</>
 	)
 }

@@ -24,7 +24,7 @@ export default function MobileMenu({ isMobileMenu, handleMobileMenu }: any) {
 											<Link className="nav-link active" href="/" onClick={handleMobileMenu}>Home</Link>
 										</li>
 										<li className="nav-item">
-											<Link className="nav-link" href="/#projects" onClick={handleMobileMenu}>Portfolio</Link>
+											<Link className="nav-link" href="/#projects" onClick={handleMobileMenu}>Projects</Link>
 										</li>
 										<li className="nav-item">
 											<Link className="nav-link" href="/#resume" onClick={handleMobileMenu}>My Resume</Link>
